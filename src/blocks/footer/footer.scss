@@ -1,3 +1,158 @@
 .footer {
-  flex: 0 1;
+  padding: rem(80px) rem(142px) rem(48px) rem(143px);
+  border-radius: 48px;
+  background: #f3f3f3;
+
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  grid-template-rows: auto auto rem(61px);
+
+  &__logo svg {
+    width: rem(172px);
+    height: rem(32px);
+    flex-shrink: 0;
+  }
+
+  &__man {
+    margin-top: rem(60px);
+
+    svg {
+      width: rem(134px);
+      height: rem(218px);
+    }
+  }
+
+  &__tel {
+    position: relative;
+
+    color: #364a46;
+
+    font-family: 'TT Firs Neue';
+    font-size: rem(24px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%; /* 21.6px */
+    letter-spacing: rem(-0.48px);
+
+    white-space: nowrap;
+
+    &:hover {
+      color: #dd5799;
+    }
+  }
+
+  &__mail {
+    margin-top: rem(12px);
+
+    color: #364a46;
+    font-family: 'TT Firs Neue';
+    font-size: rem(24px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%; /* 21.6px */
+    letter-spacing: rem(-0.48px);
+
+    &:hover {
+      color: #dd5799;
+    }
+  }
+
+  &__col-1 {
+    display: flex;
+    flex-direction: column;
+    grid-area: 1 / 2 / 3 / 5;
+  }
+
+  &__col-2 {
+    grid-area: 1 / 5 / 3 / 9;
+  }
+
+  &__col-3 {
+    display: flex;
+    flex-direction: column;
+    grid-area: 1 / 9 / 2 / 14;
+  }
+
+  &__col-4 {
+    grid-area: 2 / 9 / 3 / 14;
+  }
+
+  &__col-5 {
+    grid-area: 1 / 14 / 3 / 16;
+  }
+
+  &__col-6 {
+    grid-area: 4 / 2 / 5 / 5;
+  }
+
+  &__col-7 {
+    grid-area: 4 / 5 / 5 / 10;
+  }
+
+  &__col-8 {
+    grid-area: 4 / 14 / 5 / 16;
+  }
+}
+
+.footer-bottom {
+  padding: rem(48px) rem(142px) rem(48px) rem(143px);
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: rem(24px);
+
+  &__item a {
+    position: relative;
+
+    color: #364a46;
+    font-family: 'TT Firs Neue';
+    font-size: rem(40px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%;
+    letter-spacing: rem(-0.8px);
+
+    &:hover {
+      color: #dd5799;
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  gap: rem(8px);
+
+  &__link {
+    display: flex;
+    width: rem(74px);
+    height: rem(74px);
+    background-color: #fff;
+    border-radius: 16px;
+    border: 2px solid #ececec;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    &:hover {
+      color: var(--2);
+      background-color: #364a46;
+
+      path {
+        fill: #fff;
+      }
+    }
+    svg path {
+      width: rem(30px);
+      height: rem(30px);
+    }
+  }
+}
+
+.px-28 {
+  padding-inline: rem(28px);
 }
