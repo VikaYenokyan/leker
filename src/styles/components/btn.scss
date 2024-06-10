@@ -1,0 +1,74 @@
+.btn {
+  padding: 25px 24px;
+
+  display: flex;
+  gap: rem(16px);
+  align-items: center;
+
+  border-radius: 16px;
+  border: none;
+
+  color: #364a46;
+
+  @media #{media("<")} {
+    padding: rem(14px);
+  }
+
+  &_pink {
+    background: #dd5799;
+    color: #fff;
+
+    &:hover {
+      background: #c7397f;
+    }
+  }
+
+  &_grey {
+    $comp: &;
+    background: #f3f3f3;
+
+    &:hover {
+      background: #dd5799;
+      color: #fff;
+
+      #{$comp}__grey:hover {
+        background: #dd5799;
+      }
+
+      svg {
+        fill: #dd5799;
+      }
+
+      path {
+        stroke: #fff;
+      }
+    }
+  }
+
+  &__svg svg {
+    width: rem(24px);
+    height: rem(24px);
+
+    @media #{media("<")} {
+      width: rem(16px);
+      height: rem(16px);
+    }
+
+    @media #{media("<", m)} {
+      width: rem(24px);
+      height: rem(24px);
+    }
+  }
+
+  &__name {
+    font-family: Rubik;
+    font-size: rem(18px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    @media #{media("<")} {
+      font-size: rem(12px);
+    }
+  }
+}
