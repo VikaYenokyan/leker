@@ -1,3 +1,170 @@
 .header {
-  flex: 0 1;
+  padding: rem(8px) rem(8px) rem(8px) rem(32px);
+  max-width: rem(1872px);
+  margin-inline: auto;
+
+  display: flex;
+  align-items: center;
+
+  border: 2px solid #f0f0f0;
+  border-radius: rem(20px);
+
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 14px 24px 0px rgba(0, 0, 0, 0.04);
+
+  @media #{media("<")} {
+    padding: rem(8px) rem(8px) rem(8px) rem(16px);
+
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: rem(173px);
+    height: rem(32px);
+
+    @media #{media("<")} {
+      width: rem(96px);
+      height: rem(18px);
+    }
+  }
+
+  &__tel {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    color: #364a46;
+
+    font-family: Rubik;
+    font-size: rem(18px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    white-space: nowrap;
+
+    &::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: rem(-7px);
+      display: block;
+      width: 0;
+      transition: 0.3s;
+      height: 2px;
+      background: #364a46;
+    }
+
+    &:hover:after {
+      width: 100%;
+    }
+  }
+}
+
+.inner-content {
+  padding: rem(24px);
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-column-gap: rem(32px);
+
+  &__item a {
+    position: relative;
+
+    color: #364a46;
+    font-family: Rubik;
+    font-size: rem(19px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    &::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: rem(-7px);
+      display: block;
+      width: 0;
+      transition: 0.3s;
+      height: 2px;
+      background: #364a46;
+    }
+
+    &:hover:after {
+      width: 100%;
+    }
+  }
+}
+
+.col-3 {
+  margin-left: rem(4px);
+  @media #{media("<")} {
+    margin-left: rem(2px);
+  }
+}
+
+.col-2 {
+  margin-left: rem(151px);
+
+  display: flex;
+  gap: rem(4px);
+
+  @media #{media("<")} {
+    margin-left: auto;
+  }
+
+  @media #{media("<", m)} {
+    display: none;
+  }
+}
+
+.col-4 {
+  margin-left: rem(207px);
+  @media #{media("<")} {
+    display: none;
+  }
+}
+
+.col-5 {
+  margin-left: rem(84px);
+  @media #{media("<")} {
+    display: none;
+  }
+}
+
+.col-6 {
+  margin-left: rem(129px);
+  @media #{media("<")} {
+    display: none;
+  }
+}
+
+.col-7 {
+  display: none;
+
+  @media #{media("<")} {
+    display: inline-block;
+    order: 1;
+    margin-left: rem(2px);
+  }
+
+  @media #{media("<", m)} {
+    display: none;
+  }
+}
+
+.col-8 {
+  display: none;
+
+  @media #{media("<", m)} {
+    display: inline-block;
+    order: -1;
+  }
+}
+
+.px-32 {
+  padding-inline: rem(32px);
 }
