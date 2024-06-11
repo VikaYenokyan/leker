@@ -1,0 +1,17 @@
+.title {
+  margin-top: rem(25px);
+
+  color: #364a46;
+  font-family: 'TT Firs Neue';
+  font-size: rem(120px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 90%;
+  letter-spacing: rem(-2.4px);
+
+  @media #{media("<")} {
+    margin-top: rem(15px);
+    font-size: rem(48px);
+    letter-spacing: rem(-0.96px);
+  }
+}
