@@ -1,14 +1,2 @@
-mixin cards(mods)
-  -
-    const baseName = 'cards'
-    let allMods = ''
-    if (typeof mods !== 'undefined' && mods) {
-      const modsList = mods.split(',')
-      for (const element of modsList) {
-        allMods += element.trim()[0] === '_' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
-      }
-      allMods = allMods.trim()
-    }
-
-  .cards(class=allMods)&attributes(attributes)
-    block
+mixin cards 
+  p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta laudantium blanditiis incidunt cupiditate, neque suscipit non nam tenetur quam maxime perferendis debitis sapiente, ab voluptatibus unde quidem enim modi laboriosam.
