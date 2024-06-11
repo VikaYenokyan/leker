@@ -1,0 +1,14 @@
+mixin card-item(title, descr, number, mail, ...classes)
+  .card-item(class=classes)
+    h3.card-item__title
+      =title
+    if (descr)
+      p.card-item__descr
+        =descr
+    .card-item__block 
+      if (number)
+        a.card-item__tel(href=`tel:${number}`)
+          =number
+      if (mail)
+        a.card-item__mail(href=`mailto:${mail}`)
+          =mail
