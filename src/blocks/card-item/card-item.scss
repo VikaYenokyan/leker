@@ -1,0 +1,146 @@
+.card-item {
+  $comp: &;
+  padding: rem(32px) rem(32px) rem(34px) rem(32px);
+  border-radius: rem(24px);
+
+  width: rem(608px);
+  height: rem(340px);
+
+  display: flex;
+  gap: rem(12px);
+  flex-direction: column;
+  justify-content: space-between;
+
+  &_green {
+    background: #d2f6ec;
+
+    background-image: url(../../images/green-vector.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: rem(347px) rem(237px);
+  }
+
+  &_pink {
+    background: #fde0ed;
+
+    background-image: url(../../images/pink-vector.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: rem(201px) rem(307px);
+
+    #{$comp}__tel {
+      &::before {
+        background-image: url(../../images/card-pink-phone.svg);
+      }
+    }
+
+    #{$comp}__mail {
+      &::before {
+        background-image: url(../../images/card-pink-mail.svg);
+      }
+    }
+  }
+
+  &_yellow {
+    background: #ffeed2;
+
+    background-image: url(../../images/yellow-vector.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: rem(244px) rem(247px);
+
+    #{$comp}__mail {
+      &::before {
+        background-image: url(../../images/card-yellow-mail.svg);
+      }
+    }
+
+    #{$comp}__block {
+      margin-bottom: rem(45px);
+    }
+  }
+
+  &__title {
+    color: #364a46;
+    font-family: 'TT Firs Neue';
+    font-size: rem(32px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: rem(-0.64px);
+  }
+
+  &__block {
+    margin-top: auto;
+    margin-bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: rem(15px);
+  }
+
+  &__descr {
+    max-width: rem(400px);
+    color: #364a46;
+    font-family: Rubik;
+    font-size: rem(24px);
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__tel {
+    position: relative;
+
+    margin-left: rem(48px);
+    color: #364a46;
+    font-family: Rubik;
+    font-size: rem(24px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    white-space: nowrap;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: rem(-48px);
+      width: rem(32px);
+      height: rem(32px);
+      background: #fff;
+      border-radius: rem(8px);
+
+      background-image: url(../../images/card-phone.svg);
+      background-repeat: no-repeat;
+      background-size: rem(20px) rem(20px);
+      background-position: center center;
+    }
+  }
+
+  &__mail {
+    position: relative;
+    margin-left: rem(48px);
+
+    color: #364a46;
+    font-family: Rubik;
+    font-size: rem(24px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: rem(-48px);
+      width: rem(32px);
+      height: rem(32px);
+      background: #fff;
+      border-radius: rem(8px);
+
+      background-image: url(../../images/card-green-mail.svg);
+      background-repeat: no-repeat;
+      background-size: rem(20px) rem(20px);
+      background-position: center center;
+    }
+  }
+}
