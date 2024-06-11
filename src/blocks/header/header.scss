@@ -26,6 +26,11 @@
       width: rem(96px);
       height: rem(18px);
     }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__tel {
@@ -64,6 +69,10 @@
 
 .inner-content {
   padding: rem(24px);
+
+  @media #{media("<")} {
+    padding: rem(12px);
+  }
 }
 
 .menu {
