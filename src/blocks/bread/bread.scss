@@ -1,0 +1,57 @@
+.bread {
+  margin-top: rem(25px);
+
+  display: flex;
+  gap: rem(31px);
+
+  position: relative;
+
+  @media #{media("<")} {
+    margin-top: rem(15px);
+  }
+
+  &__tab {
+    color: #364a46;
+    font-family: 'TT Firs Neue';
+    font-size: rem(16px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%;
+    text-transform: uppercase;
+
+    &::after {
+      margin-left: rem(8px);
+
+      display: inline-block;
+      vertical-align: text-top;
+
+      content: url('../../images/left-arrow.svg');
+
+      width: rem(16px);
+      height: rem(16px);
+    }
+
+    &_cur {
+      color: #0a8;
+
+      &::after {
+        content: url('../../images/down-arrow.svg');
+        width: rem(16px);
+        height: rem(16px);
+
+        display: inline-block;
+        vertical-align: text-top;
+
+        margin-left: rem(8px);
+      }
+    }
+  }
+}
+
+.contact-inner {
+  padding-inline: rem(24px);
+
+  @media #{media("<")} {
+    padding-inline: rem(12px);
+  }
+}
