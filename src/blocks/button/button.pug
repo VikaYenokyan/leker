@@ -1,5 +1,17 @@
-mixin button(text, href, disabled, )
-  if href
-    a.button(class=allMods data-btn href=href, disabled=disabled)&attributes(attributes)=text
-  else
-    button.button(class=allMods, data-btn disabled=disabled)&attributes(attributes)=text
+mixin button(url, name, type, ...classes)
+  if (type === "link")
+    a.btn(href=url class=classes)
+      if (block)
+        .btn__svg
+          block
+      if (name)
+        .btn__name 
+          != name
+  else if (type === "btn")
+    button.btn(type="button" class=classes)
+      if (block)
+        .btn__svg
+          block
+      if (name)
+        .btn__name 
+          != name

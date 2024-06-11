@@ -1,30 +1,76 @@
-.button {
-  position: relative;
-  display: flex;
-  padding: 0 rem(24px);
-  height: rem(60px);
-  border-radius: rem(8px);
-  background: var(--1, #62215b);
-  justify-content: center;
-  align-items: center;
-  border: 1px solid transparent;
-  color: #fff;
-  font-family: TT Rounds Neue;
-  font-size: rem(16px);
-  font-weight: 620;
-  text-align: center;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: $transition;
-  white-space: nowrap;
+.btn {
+  padding: 25px 24px;
 
-  &:hover {
-    background: var(--2, #c19f86);
+  display: flex;
+  gap: rem(16px);
+  align-items: center;
+  justify-content: center;
+
+  border-radius: rem(16px);
+  border: none;
+
+  color: #364a46;
+
+  @media #{media("<")} {
+    padding: rem(14px);
+    border-radius: rem(12px);
   }
-  &:disabled {
-    background: #f0e7ef;
-    pointer-events: none;
-    color: var(--1, #62215b);
-    opacity: 0.3;
+
+  &_pink {
+    background: #dd5799;
+    color: #fff;
+
+    &:hover {
+      background: #c7397f;
+    }
+  }
+
+  &_grey {
+    $comp: &;
+    background: #f3f3f3;
+
+    &:hover {
+      background: #dd5799;
+      color: #fff;
+
+      #{$comp}__grey:hover {
+        background: #dd5799;
+      }
+
+      svg {
+        fill: #dd5799;
+      }
+
+      path {
+        stroke: #fff;
+      }
+    }
+  }
+
+  &__svg svg {
+    width: rem(24px);
+    height: rem(24px);
+
+    @media #{media("<")} {
+      width: rem(16px);
+      height: rem(16px);
+    }
+
+    @media #{media("<", m)} {
+      width: rem(24px);
+      height: rem(24px);
+    }
+  }
+
+  &__name {
+    font-family: Rubik;
+    font-size: rem(18px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    @media #{media("<")} {
+      font-size: rem(12px);
+    }
   }
 }
