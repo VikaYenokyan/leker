@@ -1,0 +1,77 @@
+.address-card {
+  padding: rem(32px);
+
+  display: flex;
+  flex-direction: column;
+  gap: rem(20px);
+
+  border-radius: rem(24px);
+
+  @media #{media("<")} {
+    padding: rem(12px);
+    border-radius: 12px;
+    gap: rem(12px);
+  }
+
+  &__index {
+    @media #{media("<")} {
+      display: block;
+    }
+  }
+
+  &_green {
+    background: #0a8;
+  }
+
+  &_blue {
+    background: #0097d4;
+  }
+
+  &__title {
+    color: #fff;
+    font-family: 'TT Firs Neue';
+    font-size: rem(32px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: rem(-0.64px);
+
+    @media #{media("<")} {
+      font-size: rem(20px);
+      letter-spacing: rem(-0.64px);
+    }
+  }
+
+  &__descr {
+    max-width: rem(370px);
+    color: #fff;
+    font-family: Rubik;
+    font-size: rem(18px);
+    font-weight: 400;
+    line-height: 160%;
+
+    @media #{media("<")} {
+      font-size: rem(12px);
+      letter-spacing: 130%;
+    }
+
+    @media #{media("<", m)} {
+      max-width: rem(136px);
+    }
+  }
+
+  &__schedule {
+    margin-top: rem(65px);
+
+    color: #fff;
+    font-size: rem(18px);
+    text-transform: uppercase;
+
+    @media #{media("<")} {
+      margin-top: rem(12px);
+
+      font-size: rem(12px);
+      letter-spacing: 130%;
+    }
+  }
+}

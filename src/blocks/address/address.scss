@@ -1,0 +1,34 @@
+.address {
+  margin-top: rem(24px);
+
+  display: grid;
+  grid-template-columns: 4fr 12fr;
+  grid-column-gap: rem(24px);
+
+  @media #{media("<")} {
+    margin-top: rem(48px);
+
+    grid-template-columns: 1fr 3fr;
+    grid-column-gap: rem(12px);
+  }
+
+  @media #{media("<", m)} {
+    grid-template-columns: 4fr;
+    grid-row-gap: rem(12px);
+  }
+
+  &__block {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: rem(24px);
+
+    @media #{media("<")} {
+      grid-row-gap: rem(12px);
+    }
+
+    @media #{media("<", m)} {
+      grid-template-columns: 2fr 2fr;
+      grid-column-gap: rem(12px);
+    }
+  }
+}

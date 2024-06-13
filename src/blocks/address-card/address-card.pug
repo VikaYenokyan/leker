@@ -1,0 +1,11 @@
+mixin address-card(title, index, descr, schedule, ...classes)
+  .address-card(class=classes) 
+    .address-card__title
+      =title
+    .address-card__descr
+      span.address-card__index 
+        =index
+        |, 
+      != descr
+    .address-card__schedule
+      =schedule
