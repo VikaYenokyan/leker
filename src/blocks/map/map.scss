@@ -1,0 +1,39 @@
+.map {
+  object-fit: cover;
+  width: rem(1398px);
+  height: rem(600px);
+
+  @media #{media("<")} {
+    display: none;
+  }
+
+  &-d {
+    display: none;
+
+    @media #{media("<")} {
+      display: block;
+      width: rem(554px);
+      height: rem(332px);
+      border-radius: rem(12px);
+    }
+
+    @media #{media("<", m)} {
+      display: none;
+    }
+  }
+
+  &-m {
+    display: none;
+
+    @media #{media("<")} {
+      display: none;
+    }
+
+    @media #{media("<", m)} {
+      display: block;
+      width: rem(351px);
+      height: rem(250px);
+      border-radius: rem(12px);
+    }
+  }
+}
