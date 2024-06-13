@@ -1,0 +1,11 @@
+mixin links
+  .links
+    h3.links__title
+      |Мы в социальных сетях
+    .links__block
+      +link-item("https://www.vk.com", "link-item_vk")
+        +vk-big
+      +link-item("https://www.youtube.com", "link-item_youtube")
+        +youtube-big
+      +link-item("https://ok.ru/", "link-item_ok")
+        +ok-big

@@ -1,0 +1,5 @@
+mixin link-item(link, ...classes)
+  a.link-item(href=link, class=classes) 
+    if (block)
+      .link-item__svg
+        block

@@ -1,0 +1,86 @@
+.link-item {
+  $comp: &;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: rem(399px);
+  height: rem(399px);
+
+  border-radius: rem(270px);
+  border: 2px solid #f0f0f0;
+
+  @media #{media("<")} {
+    width: rem(240px);
+    height: rem(240px);
+  }
+
+  @media #{media("<", m)} {
+    width: rem(104px);
+    height: rem(104px);
+  }
+
+  &_vk {
+    &:hover {
+      border: 12px solid #07f;
+    }
+
+    #{$comp}__svg {
+      width: rem(66px);
+      height: rem(40px);
+
+      @media #{media("<")} {
+        width: rem(42px);
+        height: rem(26px);
+      }
+
+      @media #{media("<", m)} {
+        width: rem(31px);
+        height: rem(18px);
+      }
+    }
+  }
+
+  &_youtube {
+    &:hover {
+      border: 12px solid #f00;
+    }
+
+    #{$comp}__svg {
+      width: rem(65px);
+      height: rem(45px);
+
+      @media #{media("<")} {
+        width: rem(42px);
+        height: rem(30px);
+      }
+
+      @media #{media("<", m)} {
+        width: rem(31px);
+        height: rem(21px);
+      }
+    }
+  }
+
+  &_ok {
+    &:hover {
+      border: 12px solid #f7931e;
+    }
+
+    #{$comp}__svg {
+      width: rem(64px);
+      height: rem(64px);
+
+      @media #{media("<")} {
+        width: rem(45px);
+        height: rem(45px);
+      }
+
+      @media #{media("<", m)} {
+        width: rem(31px);
+        height: rem(31px);
+      }
+    }
+  }
+}
