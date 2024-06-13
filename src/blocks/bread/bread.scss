@@ -2,7 +2,7 @@
   margin-top: rem(25px);
 
   display: flex;
-  gap: rem(31px);
+  gap: rem(16px);
 
   position: relative;
 
@@ -11,6 +11,10 @@
   }
 
   &__tab {
+    display: flex;
+    align-items: center;
+    gap: rem(8px);
+
     color: #364a46;
     font-family: 'TT Firs Neue';
     font-size: rem(16px);
@@ -19,31 +23,17 @@
     line-height: 90%;
     text-transform: uppercase;
 
-    &::after {
-      margin-left: rem(8px);
+    &:hover {
+      $comp: &;
+      color: #0a8;
 
-      display: inline-block;
-      vertical-align: text-top;
-
-      content: url('../../images/left-arrow.svg');
-
-      width: rem(16px);
-      height: rem(16px);
+      svg path {
+        stroke: #0a8;
+      }
     }
 
     &_cur {
       color: #0a8;
-
-      &::after {
-        content: url('../../images/down-arrow.svg');
-        width: rem(16px);
-        height: rem(16px);
-
-        display: inline-block;
-        vertical-align: text-top;
-
-        margin-left: rem(8px);
-      }
     }
   }
 }

@@ -1,6 +1,12 @@
 mixin bread
   .bread
     a.bread__tab(href="#")
-      |Главная
-    a.bread__tab.bread__tab_cur(href="#")
-      |Контакты
+      .bread__link
+        |Главная
+      .bread__arrow
+        +left-arrow
+    .bread__tab.bread__tab_cur
+      .bread__link
+        |Контакты
+      .bread__arrow
+        +down-arrow

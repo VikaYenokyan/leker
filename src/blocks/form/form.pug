@@ -1,9 +1,9 @@
 mixin form
   form.form(action="" method="POST")
-    input.form__input(type="name" id="contact_name" placeholder="Ваше имя" required)
-    input.form__input(type="email" id="contact_mail" placeholder="E-mail" required)
-    input.form__input(type="tel" id="contact_tel" placeholder="Телефон" required)
-    textarea.form__input(id="contact_text" name="contact_text" cols="30" rows="4" placeholder="Сообщение")
+    input.form__input(type="name" placeholder="Ваше имя" required)
+    input.form__input(type="email" placeholder="E-mail" required)
+    input.form__input(type="tel" placeholder="Телефон" required)
+    textarea.form__input.form__input_big(name="contact_text" placeholder="Сообщение")
     .form__block 
       p.form__descr
         |Нажимая на кнопку «Отправить» я даю согласие на условия 
