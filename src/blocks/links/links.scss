@@ -1,0 +1,45 @@
+.links {
+  margin-top: rem(24px);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media #{media("<")} {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: rem(12px);
+  }
+
+  @media #{media("<", m)} {
+    margin-top: rem(48px);
+  }
+
+  &__block {
+    display: flex;
+    gap: rem(21px);
+
+    @media #{media("<")} {
+      gap: rem(12px);
+    }
+
+    @media #{media("<", m)} {
+      gap: rem(19px);
+    }
+  }
+
+  &__title {
+    color: #364a46;
+    font-family: 'TT Firs Neue';
+    font-size: rem(32px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: rem(-0.64px);
+
+    @media #{media("<")} {
+      font-size: rem(20px);
+      letter-spacing: rem(-0.4px);
+    }
+  }
+}
