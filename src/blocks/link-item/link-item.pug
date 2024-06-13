@@ -1,5 +1,5 @@
 mixin link-item(link, ...classes)
-  a.link-item(href=link, class=classes) 
+  a.link-item(href=link, class=classes, target="_blank") 
     if (block)
       .link-item__svg
         block

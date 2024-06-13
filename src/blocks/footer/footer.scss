@@ -1,5 +1,7 @@
 .footer-main {
   padding: rem(80px) rem(24px) rem(48px) rem(24px);
+  margin-top: rem(148px);
+
   border-radius: 48px;
   background: #f3f3f3;
 
@@ -19,6 +21,8 @@
 
   @media #{media("<")} {
     padding: rem(32px) rem(12px) rem(48px) rem(12px);
+    margin-top: rem(48px);
+
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     grid-column-gap: rem(12px);

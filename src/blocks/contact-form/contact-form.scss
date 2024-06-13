@@ -1,0 +1,88 @@
+.contact-form {
+  margin-top: rem(148px);
+  margin-inline: auto;
+
+  position: relative;
+
+  max-width: rem(924px);
+
+  @media #{media("<")} {
+    margin-top: rem(48px);
+
+    max-width: rem(366px);
+  }
+
+  @media #{media("<")} {
+    margin-top: rem(74px);
+
+    max-width: rem(351px);
+  }
+
+  &__title {
+    color: #364a46;
+    font-family: 'TT Firs Neue';
+    font-size: rem(80px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: rem(-1.6px);
+
+    @media #{media("<")} {
+      font-size: rem(26px);
+      letter-spacing: rem(-0.52px);
+    }
+  }
+
+  &__img {
+    position: absolute;
+    inset: 0;
+
+    &_blue {
+      width: rem(235px);
+      height: rem(261px);
+
+      left: rem(-366px);
+      top: rem(70px);
+
+      @media #{media("<")} {
+        left: rem(-157px);
+        top: 0;
+
+        width: rem(104px);
+        height: rem(115px);
+      }
+
+      @media #{media("<", m)} {
+        left: rem(240px);
+        top: rem(-26px);
+
+        width: rem(29px);
+        height: rem(34px);
+      }
+    }
+
+    &_yellow {
+      width: rem(223px);
+      height: rem(182px);
+
+      left: rem(1030px);
+      top: rem(356px);
+
+      @media #{media("<")} {
+        left: rem(401px);
+        top: rem(297px);
+
+        width: rem(102px);
+        height: rem(83px);
+      }
+
+      @media #{media("<", m)} {
+        left: rem(276px);
+        top: rem(-15px);
+
+        width: rem(46px);
+        height: rem(37px);
+      }
+    }
+  }
+}

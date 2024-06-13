@@ -1,0 +1,106 @@
+.form {
+  margin-top: rem(48px);
+
+  display: grid;
+  grid-template-columns: 8fr;
+  gap: rem(8px);
+
+  @media #{media("<")} {
+    grid-template-columns: 2fr;
+    margin-top: rem(24px);
+  }
+
+  &__input {
+    padding: rem(28px);
+
+    border: none;
+    border-radius: rem(16px);
+    background: #f3f3f3;
+
+    color: #364a46;
+    font-family: Rubik;
+    font-size: rem(20px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @media #{media("<")} {
+      padding: rem(16px);
+
+      font-size: rem(14px);
+      line-height: 130%;
+    }
+
+    &::placeholder {
+      color: #364a46;
+      opacity: 0.5;
+      font-family: Rubik;
+      font-size: rem(20px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+      @media #{media("<")} {
+        font-size: rem(14px);
+        line-height: 130%;
+      }
+    }
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media #{media("<")} {
+      flex-direction: column;
+      margin-top: rem(12px);
+    }
+  }
+
+  &__button {
+    width: rem(332px);
+
+    @media #{media("<")} {
+      margin-top: rem(28px);
+
+      width: 100%;
+    }
+
+    @media #{media("<", m)} {
+      margin-top: rem(12px);
+    }
+  }
+
+  &__descr {
+    max-width: rem(450px);
+
+    color: #364a46;
+    font-family: Rubik;
+    font-size: rem(14px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @media #{media("<")} {
+      font-size: rem(12px);
+      line-height: 130%;
+    }
+
+    &_green {
+      color: #0a8;
+
+      &:hover {
+        color: #dd5799;
+      }
+    }
+  }
+}
+
+#contact_text {
+  height: rem(181px);
+
+  @media #{media("<")} {
+    height: rem(161px);
+  }
+}

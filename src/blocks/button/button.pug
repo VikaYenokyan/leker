@@ -7,8 +7,8 @@ mixin button(url, name, type, ...classes)
       if (name)
         .btn__name 
           != name
-  else if (type === "btn")
-    button.btn(type="button" class=classes)
+  else if (type === "button" || type === "submit")
+    button.btn(type=type class=classes)
       if (block)
         .btn__svg
           block

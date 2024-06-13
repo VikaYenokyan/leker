@@ -1,0 +1,13 @@
+mixin form
+  form.form(action="" method="POST")
+    input.form__input(type="name" id="contact_name" placeholder="Ваше имя" required)
+    input.form__input(type="email" id="contact_mail" placeholder="E-mail" required)
+    input.form__input(type="tel" id="contact_tel" placeholder="Телефон" required)
+    textarea.form__input(id="contact_text" name="contact_text" cols="30" rows="4" placeholder="Сообщение")
+    .form__block 
+      p.form__descr
+        |Нажимая на кнопку «Отправить» я даю согласие на условия 
+        a.form__descr.form__descr_green(href="#")
+          |политики в отношении обработки персональных данных
+      +button("#", "Отправить", "submit", "form__button", "btn_pink", "px-32")
+
