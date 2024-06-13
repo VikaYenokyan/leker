@@ -8,7 +8,9 @@ mixin card-item(title, descr, number, number_view, mail, ...classes)
     .card-item__block 
       if (number && number_view)
         a.card-item__tel(href=`tel:${number}`)
-          =number_view
+          span
+            =number_view
       if (mail)
         a.card-item__mail(href=`mailto:${mail}`)
-          =mail
+          span
+            =mail

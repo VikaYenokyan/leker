@@ -24,6 +24,16 @@
     font-weight: 400;
     line-height: normal;
 
+    resize: none;
+
+    &_big {
+      height: rem(181px);
+
+      @media #{media("<")} {
+        height: rem(161px);
+      }
+    }
+
     @media #{media("<")} {
       padding: rem(16px);
 
@@ -48,13 +58,15 @@
   }
 
   &__block {
+    margin-top: rem(16px);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     @media #{media("<")} {
       flex-direction: column;
-      margin-top: rem(12px);
+      margin-top: rem(4px);
     }
   }
 
@@ -94,13 +106,5 @@
         color: #dd5799;
       }
     }
-  }
-}
-
-#contact_text {
-  height: rem(181px);
-
-  @media #{media("<")} {
-    height: rem(161px);
   }
 }

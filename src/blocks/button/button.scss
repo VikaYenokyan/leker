@@ -10,10 +10,19 @@
   border: none;
 
   color: #364a46;
+  cursor: pointer;
+
+  transition: all 0.4s;
 
   @media #{media("<")} {
     padding: rem(14px);
     border-radius: rem(12px);
+
+    box-sizing: border-box;
+  }
+
+  @media #{media("<", m)} {
+    padding: rem(10px);
   }
 
   &_pink {
@@ -47,6 +56,7 @@
     }
   }
 
+  &__svg,
   &__svg svg {
     width: rem(24px);
     height: rem(24px);
