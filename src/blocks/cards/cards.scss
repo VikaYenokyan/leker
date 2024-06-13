@@ -4,4 +4,19 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: rem(24px);
+
+  @media #{media("<")} {
+    margin-top: rem(24px);
+
+    grid-template-columns: repeat(2, 2fr);
+
+    grid-column-gap: rem(12px);
+    grid-row-gap: rem(12px);
+  }
+
+  @media #{media("<", m)} {
+    grid-template-columns: 4fr;
+
+    grid-row-gap: rem(12px);
+  }
 }
