@@ -1,5 +1,5 @@
 .bread {
-  margin-top: rem(25px);
+  margin-top: rem(169px);
 
   display: flex;
   gap: rem(16px);
@@ -7,7 +7,7 @@
   position: relative;
 
   @media #{media("<")} {
-    margin-top: rem(15px);
+    margin-top: rem(117px);
   }
 
   &__tab {

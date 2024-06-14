@@ -17,6 +17,12 @@
     justify-content: space-between;
   }
 
+  @media #{media("<", m)} {
+    padding: rem(8px);
+
+    gap: rem(75px);
+  }
+
   &__logo {
     width: rem(173px);
     height: rem(32px);
@@ -68,9 +74,13 @@
 
 .inner-content {
   padding: rem(24px);
+  position: fixed;
+  backdrop-filter: blur(12px);
+  z-index: 10;
 
   @media #{media("<")} {
     padding: rem(12px);
+    width: 100%;
   }
 }
 
