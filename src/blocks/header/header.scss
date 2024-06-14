@@ -5,8 +5,6 @@
   display: flex;
   align-items: center;
 
-  /* max-width: rem(1872px); */
-
   border: 2px solid #f0f0f0;
   border-radius: rem(20px);
 
@@ -76,7 +74,6 @@
 
 .inner-content {
   padding: rem(24px);
-  padding-bottom: 0;
   position: fixed;
   backdrop-filter: blur(12px);
   z-index: 10;
